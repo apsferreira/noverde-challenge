@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    localstack:
+        image: localstack/localstack
+        container_name: localstack
+        hostname: localstack
+        ports:
+          - "4566-4584:4566-4584"
+          - "${PORT_WEB_UI-8080}:${PORT_WEB_UI-8080}"
+        environment:
+          - SERVICES=s3,dynamodb,lambda,sqs
+          - DEBUG=${DEBUG- }
+          - DATA_DIR=${DATA_DIR- }
+          - PORT_WEB_UI=${PORT_WEB_UI- }
+          - LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR- }
+          - KINESIS_ERROR_PROBABILITY=${KINESIS_ERROR_PROBABILITY- }
+          - DOCKER_HOST=unix:///var/run/docker.sock
+        volumes:
+            - ./data:/tmp/localstack
+            - "/var/run/docker.sock:/var/run/docker.sock"
+            - ./src/bin:/docker-entrypoint-initaws.d

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Challenge Noverde</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body>
+    <nav class="light-green lighten-1" role="navigation">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Challenge Noverde</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate" required>
+              <label for="name">Nome</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="cpf" type="text" class="cpf validate" required>
+              <label for="produto">CPF</label>
+            </div>
+            
+            <div class="input-field col s12">
+              <input id="birthdate" type="date" class="validate" required>
+              <label for="birthdate">Data de nascimento:</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="amount" type="text" class="money validate" required>
+              <label for="amount">Valor Desejado:</label>
+            </div>
+
+            <div class="input-field col s12">
+              <select id="terms" name="terms" required>
+                <option value="">Selecione</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+              </select>
+              <label for="terms">Quantidade de Parcelas Desejadas:</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="income" type="text" class="money validate" required>
+              <label for="income">Renda mensal:</label>
+            </div>
+          </div>
+          <div class="row center">
+            <button id='submit-btn' class="btn waves-effect waves-light btn-large orange btn-new" name="action" type="submit"> Enviar
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer light-green lighten-1" style="text-align: center; padding: 20px;">
+      Desenvolvido por <a href="https://linkedin.com/in/apsferreira">Antonio Pedro Ferreira</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/plentz/jquery-maskmoney/master/dist/jquery.maskMoney.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+  </body>
+</html>
