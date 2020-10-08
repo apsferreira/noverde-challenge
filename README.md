@@ -19,8 +19,10 @@ $ docker-compose up
 
 Atual status of project: 70%
 
-- structure initial of project
-- development of business logic
-- build automation (CI/CD)
+- Structure initial of project
+- Development of business logic
+- Build automation (CI/CD)
+- Frontend tests
+- Clean code structure
 
 
