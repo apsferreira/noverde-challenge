@@ -18,11 +18,23 @@ package:
     - tests/
 
 functions:
-    currentTime:
-        handler: backend/lambda/loan.endpoint
+    alive:
+        handler: backend/lambda/loan.alive
+        events:
+            - http:
+                path: /alive
+                method: get
+    loan-post:
+        handler: backend/lambda/loan.alive
         events:
             - http:
                 path: /loan
+                method: post
+    loan-get:
+        handler: backend/lambda/loan.alive
+        events:
+            - http:
+                path: /loan/
                 method: get
 
 custom:
@@ -38,3 +50,10 @@ custom:
       mountCode: True
     docker:
       sudo: True
+
+resources:
+  Resources:
+    MyQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "NoverdeQueue"

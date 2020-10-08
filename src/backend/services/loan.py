@@ -68,8 +68,6 @@ def _validate_data(self, data):
     if not income:
         self.errors.append({'income': self.REQUIRED_FIELD})
 
-
-class CreditService:
 def get_credit_score(self, cpf):
     url = settings.SCORE_URL
     access_token = settings.CREDIT_VALIDATION_TOKEN
